@@ -21,6 +21,7 @@ print(cook_book)
 print('=' * 79)
 # Задание 2
 
+
 def get_shop_list_by_dishes(dishes, person_count):
     dict_1 = {}
     for dish, ingred in cook_book.items():
@@ -41,19 +42,19 @@ get_shop_list_by_dishes(['Омлет', 'Фахитос'], 2)
 
 
 print('=' * 79)
-Задание 3
+# Задание 3
 
 with open('sorted/1.txt', 'r', encoding='utf-8') as file1, \
      open('sorted/2.txt', 'r', encoding='utf-8') as file2,\
      open('sorted/3.txt', 'r', encoding='utf-8') as file3,\
      open('sorted/resul.txt', 'a+', encoding='utf-8') as file_result:
-    def lines_file(file):
+    def lines_file(file_):
         '''
         Считывает строки из файла и вставляет в начало название файла
          и количество строк в нём.
         '''
-        line_file = file.readlines()
-        file_info = ['\n' + file.name + '\n', str(len(line_file)) + '\n']
+        line_file = file_.readlines()
+        file_info = ['\n' + file_.name + '\n', str(len(line_file)) + '\n']
         return file_info + line_file
 
     list_files = [lines_file(file1), lines_file(file2), lines_file(file3)]
